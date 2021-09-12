@@ -1,0 +1,43 @@
+@mixin overlay($color, $opacity){
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color, $opacity);
+}
+
+@mixin slide-hover {
+    color: $mainColor;
+    cursor: pointer;
+}
+
+@mixin padding-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+@mixin text-aside {
+        padding: 30px;
+        color: #fff;
+        background-color: $transparent;
+        & .content{
+            max-width: 400px;
+            & h2{
+                font-size: 1.6em;
+                line-height: 1.6em;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+            }
+            
+        }
+}
+
+@mixin bg-image($url) {
+    background-image: $url;
+    background-size: cover;
+    position: relative;
+    @content;
+}
+
